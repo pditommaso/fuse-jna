@@ -1,12 +1,17 @@
 apply plugin: 'java'
-apply plugin: 'idea'
+apply plugin: 'groovy'
 
 repositories {
 	mavenCentral()
 }
 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 dependencies {
 	compile 'net.java.dev.jna:jna:3.5.2'
+    compile "org.codehaus.groovy:groovy:2.2.2"
+    compile "org.slf4j:slf4j-api:1.7.6"
 }
 
 task uberJar(type: Jar) {
